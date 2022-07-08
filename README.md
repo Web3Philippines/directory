@@ -6,7 +6,7 @@
 
 ## 🎯 Contributing
 
-Contributions are welcome, create a pull request to this repo and we will review your code. Please consider to submit your pull request to the ```dev``` branch. Thank you!
+Contributions are welcome, create a pull request to this repo and we will review your code. Please consider to submit your pull request to the `dev` branch. Thank you!
 
 Read the project's [contributing guide](./CONTRIBUTING.md) for more info.
 

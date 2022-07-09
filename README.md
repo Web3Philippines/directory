@@ -34,4 +34,4 @@ Web3 Philippines Directory is developed and maintained by [Web3 Philippines](htt
 
 ---
 
-💻💖☕ by [Web3 Philippines](https://web3philippines.org) & [Wareneutron Developers](https://wareneutron.com)
+💻💖☕ by [Web3 Philippines](https://web3philippines.org) & [Wareneutron Developers](https://wareneutron.com) | He is Awesome 🙏

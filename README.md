@@ -1,34 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Web3 Philippines Directory [![huntr](https://cdn.huntr.dev/huntr_security_badge_mono.svg)](https://huntr.dev)
 
-## Getting Started
+[![created by](https://img.shields.io/badge/created%20by-Web3%20Philippines-purple.svg?longCache=true&style=flat-square)](https://web3philippines.org) [![maintained by](https://img.shields.io/badge/maintained%20by-Wareneutron%20Developers-blue.svg?longCache=true&style=flat-square)](https://wareneutron.com) [![Release](https://img.shields.io/github/release/web3phl/directory.svg?style=flat-square)](https://github.com/web3phl/directory/releases) [![Star](https://img.shields.io/github/stars/web3phl/directory.svg?style=flat-square)](https://github.com/web3phl/directory/stargazers) [![License](https://img.shields.io/github/license/web3phl/directory.svg?style=flat-square)](https://github.com/web3phl/directory/blob/main/LICENSE)
 
-First, run the development server:
+**Web3 Philippines Directory** is an open-source web application digital local directory of awesome Web3 things curated by the community. Actively maintained by the Web3 community in the Philippines. 📚💜💻
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## 🎯 Contributing
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Contributions are welcome, create a pull request to this repo and we will review your code. Please consider to submit your pull request to the `dev` branch. Thank you!
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Read the project's [contributing guide](./CONTRIBUTING.md) for more info.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 💬 Discussions
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+For any questions, suggestions, ideas, or simply you want to share your experience in using this project, feel free to share and discuss it to the [community](https://github.com/web3phl/directory/discussions)!
 
-## Learn More
+## 🐛 Issues
 
-To learn more about Next.js, take a look at the following resources:
+Please report any issues and bugs by [creating a new issue here](https://github.com/web3phl/directory/issues/new/choose), also make sure you're reporting an issue that doesn't exist. Any help to improve the project would be appreciated. Thanks! 🙏✨
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📋 Code of Conduct
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Read the project's [code of conduct](./CODE_OF_CONDUCT.md).
 
-## Deploy on Vercel
+## 📃 License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Web3 Philippines Directory is licensed under [GNU General Public License v3.0](https://opensource.org/licenses/GPL-3.0).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 📝 Author
+
+Web3 Philippines Directory is developed and maintained by [Web3 Philippines](https://web3philippines.org) & [Wareneutron Developers](https://wareneutron.com) with the help of awesome [contributors](https://github.com/web3phl/directory/graphs/contributors).
+
+[![contributors](https://contrib.rocks/image?repo=web3phl/directory)](https://github.com/web3phl/directory/graphs/contributors)
+
+---
+
+💻💖☕ by [Web3 Philippines](https://web3philippines.org) & [Wareneutron Developers](https://wareneutron.com) | He is Awesome 🙏

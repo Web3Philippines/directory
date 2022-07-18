@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
-import Seo from "@/components/Seo";
 import Card from "@/components/Card";
+import Seo from "@/components/Seo";
+
 
 const Home: NextPage = () => {
   return (
@@ -21,8 +22,8 @@ const Home: NextPage = () => {
           Currently, under development! 🙏
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          {/* Uncomment below to show card */}
-          {/* <Card /> */}
+          {/* Uncomment below to show card or Comment below to hide card: [ <Card /> ]*/}
+          {<Card /> }
         </div>
       </main>
     </div>

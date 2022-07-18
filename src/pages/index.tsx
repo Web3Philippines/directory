@@ -18,8 +18,11 @@ const Home: NextPage = () => {
             Web3 Philippines Directory!
           </a>
         </h1>
-        <p className="my-[4rem] mx-0 text-center text-2xl leading-[1.5]">
+        <p className="my-[2rem] mx-0 text-center text-2xl leading-[1.5]">
           Currently, under development! 🙏
+        </p>
+        <p className="mb-4 mx-0 text-center text-2xl leading-[1.5]">
+          Example Preview
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           {/* Uncomment below to show card or Comment below to hide card: [ <Card /> ]*/}

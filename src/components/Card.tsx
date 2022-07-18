@@ -1,6 +1,7 @@
 import Image from "next/image";
-import sampleIcon from "../../public/favicon/favicon-32x32.png";
 import check from "../../public/check.png";
+import sampleIcon from "../../public/favicon/favicon-32x32.png";
+
 
 // TODO
 // dynamic routing on card click

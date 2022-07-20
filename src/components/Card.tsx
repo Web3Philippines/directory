@@ -1,14 +1,28 @@
+import { Project } from "@/mock";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import check from "../../public/check.png";
 import sampleIcon from "../../public/favicon/favicon-32x32.png";
 
-
 // TODO
 // dynamic routing on card click
+interface CardProps {
+  project: Project;
+}
 
-const Card = () => {
+const Card = ({ project }: CardProps) => {
+  const router = useRouter();
+  const onCardClick = () => {
+    router.push({
+      pathname: "/project/[id]",
+      query: { id: project.id },
+    });
+  };
   return (
-    <div className="border-2 rounded-xl w-full p-4 max-w-sm cursor-pointer hover:scale-105 ease-in-out duration-150">
+    <div
+      className="w-full max-w-sm cursor-pointer rounded-xl border-2 p-4 duration-150 ease-in-out hover:scale-105"
+      onClick={onCardClick}
+    >
       <div className="flex items-center gap-3">
         <Image
           src={sampleIcon}
@@ -16,28 +30,25 @@ const Card = () => {
           layout="fixed"
           className="rounded-full"
         />
-        <h2 className="font-semibold text-xl text-mine-shaft-400">Web3 PHL</h2>
-        <div className="ml-auto flex items-center gap-2">
-          <Image src={check} alt="sample icon" height={18} width={18} />
-          <p className="text-xs tracking-wide text-purple-heart">Verified</p>
-        </div>
+        <h2 className="text-xl font-semibold text-mine-shaft-400">
+          {project.name}
+        </h2>
+        {project.verified ? (
+          <div className="ml-auto flex items-center gap-2">
+            <Image src={check} alt="sample icon" height={18} width={18} />
+            <p className="text-xs tracking-wide text-purple-heart">Verified</p>
+          </div>
+        ) : null}
       </div>
-      <p className="text-sm tracking-wide leading-4 opacity-80 my-3">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus
-        ipsam qui excepturi quam eius, ratione nulla, nesciunt quo autem
-        consequatur rem debitis, atque adipisci saepe est sed porro? Illum,
-        incidunt.
+      <p className="my-3 text-sm leading-4 tracking-wide opacity-80">
+        {project.description}
       </p>
-      <ul className="text-xs flex gap-2">
-        <li className="px-2 py-1 bg-purple-heart text-white rounded-sm lowercase">
-          NFT
-        </li>
-        <li className="px-2 py-1 bg-purple-heart text-white rounded-sm lowercase">
-          DeFi
-        </li>
-        <li className="px-2 py-1 bg-purple-heart text-white rounded-sm lowercase">
-          Gaming
-        </li>
+      <ul className="flex gap-2 text-xs">
+        {project.tags.map((tag) => (
+          <li className="rounded-sm bg-purple-heart px-2 py-1 lowercase text-white">
+            {tag}
+          </li>
+        ))}
       </ul>
     </div>
   );

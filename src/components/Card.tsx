@@ -14,7 +14,7 @@ const Card = ({ project }: CardProps) => {
   const router = useRouter();
   const onCardClick = () => {
     router.push({
-      pathname: "/project/[id]",
+      pathname: "/directory/[id]",
       query: { id: project.id },
     });
   };

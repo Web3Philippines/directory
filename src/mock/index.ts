@@ -20,7 +20,7 @@ export interface Project {
   };
 }
 
-export const projects: Array<Project> = [
+export const directory: Array<Project> = [
   {
     id: "web3ph",
     name: "Web3 PHL",

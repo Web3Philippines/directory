@@ -1,4 +1,4 @@
-import { Project as ProjectType, projects } from "@/mock";
+import { Project as ProjectType, directory } from "@/mock";
 
 interface ProjectProps {
   project: ProjectType;
@@ -14,7 +14,7 @@ export default function Project({ project }: ProjectProps) {
 }
 
 export async function getStaticPaths() {
-  const paths = projects.map((project) => ({
+  const paths = directory.map((project) => ({
     params: { id: project.id },
   }));
   return {
@@ -25,7 +25,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: any) {
   const id = params.id;
-  const project = projects.find((p) => p.id === id);
+  const project = directory.find((p) => p.id === id);
   return {
     props: {
       project,

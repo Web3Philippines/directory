@@ -22,7 +22,7 @@ export interface Project {
 
 export const directory: Array<Project> = [
   {
-    id: "web3ph",
+    id: "web3phl",
     name: "Web3 PHL",
     verified: true,
     description:

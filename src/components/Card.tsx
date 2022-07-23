@@ -1,23 +1,23 @@
-import { Project } from "@/mock";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { Project } from "@/interface";
 import check from "../../public/check.png";
 import sampleIcon from "../../public/favicon/favicon-32x32.png";
 
-// TODO
-// dynamic routing on card click
 interface CardProps {
   project: Project;
 }
 
 const Card = ({ project }: CardProps) => {
   const router = useRouter();
+
   const onCardClick = () => {
     router.push({
       pathname: "/directory/[id]",
       query: { id: project.id },
     });
   };
+
   return (
     <div
       className="w-full max-w-sm cursor-pointer rounded-xl border-2 p-4 duration-150 ease-in-out hover:scale-105"

@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { DirectoryInfo, DirectoryQuery } from "@/interface";
+import { DirectoryQuery } from "@/interface";
 import { directory } from "@/mock";
 
 //TODO: make this async await for actual data fetching
@@ -18,6 +18,10 @@ export function useGetDirectoryList({
   tags,
 }: DirectoryQuery) {
   return useQuery(["directory-list", page, size, name, tags], getDirectoryList);
+}
+
+export interface DirectoryInfo {
+  id: string;
 }
 
 function getDirectoryInfo(id: string) {

@@ -33,7 +33,3 @@ export interface DirectoryQuery {
   page: number;
   size: number;
 }
-
-export interface DirectoryInfo {
-  id: string;
-}

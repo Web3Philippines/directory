@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { GetStaticPropsContext } from "next";
+import Seo from "@/components/Seo";
 import { Project } from "@/interface";
 import { directory } from "@/mock";
 
@@ -10,6 +11,7 @@ interface ProjectProps {
 export default function ProjectPage({ project }: ProjectProps) {
   return (
     <div>
+      <Seo title={project.name} />
       <h3>{`Project Information page for ${project.name}`}</h3>
       <p>{project.description}</p>
     </div>

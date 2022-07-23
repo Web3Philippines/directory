@@ -1,26 +1,6 @@
-export interface Project {
-  id: string;
-  name: string;
-  verified: boolean;
-  description: string;
-  tags: Array<string>;
-  links: {
-    facebook: {
-      id: string;
-      url: string;
-    };
-    discord: {
-      id: string;
-      url: string;
-    };
-    twitter?: {
-      id: string;
-      url: string;
-    };
-  };
-}
+import { Project } from "@/interface";
 
-export const directory: Array<Project> = [
+export const directory: Project[] = [
   {
     id: "web3phl",
     name: "Web3 PHL",

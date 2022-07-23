@@ -1,9 +1,18 @@
 import type { NextPage } from "next";
+import { useState } from "react";
 import Card from "@/components/Card";
 import Seo from "@/components/Seo";
-import { Project, projects } from "@/mock";
+import { Project } from "@/interface";
+import { useGetDirectoryList } from "@/queries";
 
 const Home: NextPage = () => {
+  const [page, setPage] = useState<number>(1);
+  const [size, setSize] = useState<number>(10);
+  const { data: directory } = useGetDirectoryList({
+    page,
+    size,
+  });
+
   return (
     <div className="px-0 py-8">
       <Seo templateTitle="Home" />
@@ -26,9 +35,11 @@ const Home: NextPage = () => {
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           {/* Uncomment below to show card or Comment below to hide card: [ <Card /> ]*/}
-          {projects.map((project: Project) => (
-            <Card project={project} />
-          ))}
+          {!!directory && directory.length > 0
+            ? directory.map((project: Project) => (
+                <Card project={project} key={project.id} />
+              ))
+            : null}
         </div>
       </main>
     </div>

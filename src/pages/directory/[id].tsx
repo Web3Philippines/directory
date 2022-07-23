@@ -1,10 +1,13 @@
-import { Project as ProjectType, directory } from "@/mock";
+/* eslint-disable @typescript-eslint/require-await */
+import { GetStaticPropsContext } from "next";
+import { Project } from "@/interface";
+import { directory } from "@/mock";
 
 interface ProjectProps {
-  project: ProjectType;
+  project: Project;
 }
 
-export default function Project({ project }: ProjectProps) {
+export default function ProjectPage({ project }: ProjectProps) {
   return (
     <div>
       <h3>{`Project Information page for ${project.name}`}</h3>
@@ -23,12 +26,18 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }: any) {
-  const id = params.id;
+export async function getStaticProps(context: GetStaticPropsContext) {
+  const id = context.params?.id;
   const project = directory.find((p) => p.id === id);
+  if (!!id && !!project) {
+    return {
+      props: {
+        project,
+      },
+    };
+  }
+
   return {
-    props: {
-      project,
-    },
+    notFound: true,
   };
 }

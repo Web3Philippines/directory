@@ -44,8 +44,11 @@ const Card = ({ project }: CardProps) => {
         {project.description}
       </p>
       <ul className="flex gap-2 text-xs">
-        {project.tags.map((tag) => (
-          <li className="rounded-sm bg-purple-heart px-2 py-1 lowercase text-white">
+        {project.tags.map((tag, idx) => (
+          <li
+            key={idx}
+            className="rounded-sm bg-purple-heart px-2 py-1 lowercase text-white"
+          >
             {tag}
           </li>
         ))}

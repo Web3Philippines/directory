@@ -14,7 +14,7 @@ export interface SocialMedia {
   url: string;
 }
 
-export interface Project {
+export interface Directory {
   id: string;
   name: string;
   verified: boolean;

@@ -1,6 +1,6 @@
-import { Project } from "@/interface";
+import { Directory } from "@/interface";
 
-export const directory: Project[] = [
+export const directories: Directory[] = [
   {
     id: "web3phl",
     name: "Web3 PHL",

@@ -1,23 +1,18 @@
 import { useQuery } from "@tanstack/react-query";
 import { DirectoryQuery } from "@/interface";
-import { directory } from "@/mock";
+import { directories } from "@/mock";
 
 //TODO: make this async await for actual data fetching
-function getDirectoryList() {
+function getDirectories() {
   try {
-    return directory;
+    return directories;
   } catch (error: unknown) {
-    console.error("getDirectoryList error", error);
+    console.error("getDirectories error", error);
   }
 }
 
-export function useGetDirectoryList({
-  page,
-  size,
-  name,
-  tags,
-}: DirectoryQuery) {
-  return useQuery(["directory-list", page, size, name, tags], getDirectoryList);
+export function useGetDirectories({ page, size, name, tags }: DirectoryQuery) {
+  return useQuery(["directories", page, size, name, tags], getDirectories);
 }
 
 export interface DirectoryInfo {
@@ -26,7 +21,7 @@ export interface DirectoryInfo {
 
 function getDirectoryInfo(id: string) {
   try {
-    return directory.find((d) => d.id === id);
+    return directories.find((d) => d.id === id);
   } catch (error: unknown) {
     console.error("getDirectoryInfo error", error);
   }

@@ -1,21 +1,26 @@
-import { Project as ProjectType, directory } from "@/mock";
+/* eslint-disable @typescript-eslint/require-await */
+import { GetStaticPropsContext } from "next";
+import Seo from "@/components/Seo";
+import { Directory } from "@/interface";
+import { directories } from "@/mock";
 
-interface ProjectProps {
-  project: ProjectType;
+interface DirectoryProps {
+  directory: Directory;
 }
 
-export default function Project({ project }: ProjectProps) {
+export default function DirectoryPage({ directory }: DirectoryProps) {
   return (
     <div>
-      <h3>{`Project Information page for ${project.name}`}</h3>
-      <p>{project.description}</p>
+      <Seo title={directory.name} />
+      <h3>{`directory Information page for ${directory.name}`}</h3>
+      <p>{directory.description}</p>
     </div>
   );
 }
 
 export async function getStaticPaths() {
-  const paths = directory.map((project) => ({
-    params: { id: project.id },
+  const paths = directories.map((d) => ({
+    params: { id: d.id },
   }));
   return {
     paths,
@@ -23,12 +28,18 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }: any) {
-  const id = params.id;
-  const project = directory.find((p) => p.id === id);
+export async function getStaticProps(context: GetStaticPropsContext) {
+  const id = context.params?.id;
+  const directory = directories.find((p) => p.id === id);
+  if (!!id && !!directory) {
+    return {
+      props: {
+        directory,
+      },
+    };
+  }
+
   return {
-    props: {
-      project,
-    },
+    notFound: true,
   };
 }

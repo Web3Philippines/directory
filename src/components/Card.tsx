@@ -25,7 +25,7 @@ const Card = ({ directory }: CardProps) => {
     >
       <div className="flex items-center gap-3">
         <Image
-          src={directory.image}
+          src="/placeholder.png"
           alt="icon"
           width={50}
           height={50}

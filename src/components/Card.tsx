@@ -21,7 +21,7 @@ const Card = ({ directory }: CardProps) => {
   return (
     <div
       className="w-full max-w-sm cursor-pointer rounded-xl border-2 p-4 duration-150 ease-in-out hover:scale-105"
-      onClick={onCardClick}
+      // onClick={onCardClick}
     >
       <div className="flex items-center gap-3">
         <Image

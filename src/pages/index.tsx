@@ -26,7 +26,7 @@ const Home: NextPage = () => {
           >
             Web3 Philippines Directory!
           </a>
-          <p className="my-[1rem] mx-60 text-justify text-lg leading-1">
+          <p className="my-[1rem] mx-60 text-justify text-lg leading-1 about">
             Web3 Philippines Directory is an open-source web application digital local directory of awesome Web3 things curated by the community. Actively maintained by the first and official Web3 community in the Philippines. 📚💜💻 <a href="https://forms.gle/8BUfE2A7NRtqYbm66" className="text-[#0070f3] hover:underline focus:underline active:underline">Submit your Web3 project.</a>
           </p>
         </h1>

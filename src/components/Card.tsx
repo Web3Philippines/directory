@@ -2,7 +2,6 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { Directory } from "@/interface";
 import check from "../../public/check.png";
-import sampleIcon from "../../public/favicon/favicon-32x32.png";
 
 interface CardProps {
   directory: Directory;

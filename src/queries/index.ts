@@ -3,8 +3,22 @@ import { DirectoryQuery } from "@/interface";
 import { directories } from "@/mock";
 
 //TODO: make this async await for actual data fetching
-function getDirectories() {
+async function getDirectories() {
   try {
+    // temporary patch
+    const options = {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    const response = await fetch(
+      "https://shielded-fortress-40979.herokuapp.com/directory",
+      options,
+    );
+
+    const directories = await response.json();
     return directories;
   } catch (error: unknown) {
     console.error("getDirectories error", error);

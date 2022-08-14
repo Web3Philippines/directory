@@ -2,7 +2,6 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { Directory } from "@/interface";
 import check from "../../public/check.png";
-import sampleIcon from "../../public/favicon/favicon-32x32.png";
 
 interface CardProps {
   directory: Directory;
@@ -12,10 +11,11 @@ const Card = ({ directory }: CardProps) => {
   const router = useRouter();
 
   const onCardClick = () => {
-    router.push({
-      pathname: "/directory/[id]",
-      query: { id: directory.id },
-    });
+    router.push(directory.links.website.url);
+    // router.push({
+    //   pathname: "/directory/[id]",
+    //   query: { id: directory.id },
+    // });
   };
 
   return (
@@ -25,8 +25,10 @@ const Card = ({ directory }: CardProps) => {
     >
       <div className="flex items-center gap-3">
         <Image
-          src={sampleIcon}
-          alt="sample icon"
+          src="/placeholder.png"
+          alt="icon"
+          width={50}
+          height={50}
           layout="fixed"
           className="rounded-full"
         />

@@ -4,6 +4,10 @@ module.exports = {
     dirs: ["src"],
   },
 
+  images: {
+    domains: ["bafybeiftqfcxixlfsmbgigq7mwssaesh3dy2bznwu4374k2du7vtnncame.ipfs.nftstorage.link"]
+  },
+
   reactStrictMode: true,
 
   // Uncoment to add domain whitelist

@@ -18,12 +18,15 @@ export interface Directory {
   id: string;
   name: string;
   verified: boolean;
+  image: string;
   description: string;
   tags: string[];
   links: {
+    website: SocialMedia;
     facebook: SocialMedia;
     discord: SocialMedia;
-    twitter?: SocialMedia;
+    twitter: SocialMedia;
+    linkedin: SocialMedia;
   };
 }
 

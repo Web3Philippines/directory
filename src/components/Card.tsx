@@ -12,21 +12,24 @@ const Card = ({ directory }: CardProps) => {
   const router = useRouter();
 
   const onCardClick = () => {
-    router.push({
-      pathname: "/directory/[id]",
-      query: { id: directory.id },
-    });
+    router.push(directory.links.website.url);
+    // router.push({
+    //   pathname: "/directory/[id]",
+    //   query: { id: directory.id },
+    // });
   };
 
   return (
     <div
       className="w-full max-w-sm cursor-pointer rounded-xl border-2 p-4 duration-150 ease-in-out hover:scale-105"
-      // onClick={onCardClick}
+      onClick={onCardClick}
     >
       <div className="flex items-center gap-3">
         <Image
-          src={sampleIcon}
-          alt="sample icon"
+          src={directory.image}
+          alt="icon"
+          width={50}
+          height={50}
           layout="fixed"
           className="rounded-full"
         />

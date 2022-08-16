@@ -27,6 +27,9 @@ export interface Directory {
     discord: SocialMedia;
     twitter: SocialMedia;
     linkedin: SocialMedia;
+    telegram: SocialMedia;
+    tiktok: SocialMedia;
+    medium: SocialMedia;
   };
 }
 

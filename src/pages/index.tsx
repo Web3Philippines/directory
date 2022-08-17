@@ -18,7 +18,7 @@ const Home: NextPage = () => {
       <Seo templateTitle="Home" />
 
       <main className="flex min-h-screen flex-1 flex-col justify-center py-16 px-6 lg:px-0">
-        <h1 className="my-[1rem] m-0 text-center text-5xl leading-[1.15] md:text-[4rem]">
+        <h1 className="m-0 my-[1rem] text-center text-5xl leading-[1.15] md:text-[4rem]">
           Welcome to{" "}
           <a
             href="https://web3philippines.org"
@@ -26,8 +26,17 @@ const Home: NextPage = () => {
           >
             Web3 Philippines Directory!
           </a>
-          <p className="my-[1rem] mx-60 text-justify text-lg leading-1 about">
-            Web3 Philippines Directory is an open-source web application digital local directory of awesome Web3 things curated by the community. Actively maintained by the first and official Web3 community in the Philippines. 📚💜💻 <a href="https://forms.gle/8BUfE2A7NRtqYbm66" className="text-[#0070f3] hover:underline focus:underline active:underline">Submit your Web3 project.</a>
+          <p className="leading-1 about my-[1rem] mx-60 text-justify text-lg">
+            Web3 Philippines Directory is an open-source web application digital
+            local directory of awesome Web3 things curated by the community.
+            Actively maintained by the first and official Web3 community in the
+            Philippines. 📚💜💻{" "}
+            <a
+              href="https://forms.gle/8BUfE2A7NRtqYbm66"
+              className="text-[#0070f3] hover:underline focus:underline active:underline"
+            >
+              Submit your Web3 project.
+            </a>
           </p>
         </h1>
         <div className="flex flex-wrap justify-center gap-4">

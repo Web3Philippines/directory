@@ -13,12 +13,12 @@ async function getDirectories() {
     };
 
     const response = await fetch(
-      "https://shielded-fortress-40979.herokuapp.com/directory",
+      "https://directory-api.web3philippines.org/api/directory",
       options,
     );
 
     const directories = await response.json();
-    return directories;
+    return directories.data;
   } catch (error: unknown) {
     console.error("getDirectories error", error);
   }

@@ -13,7 +13,7 @@ async function getDirectories() {
     };
 
     const response = await fetch(
-      "https://shielded-fortress-40979.herokuapp.com/directory",
+      "https://directory-api-brown.vercel.app/api/directory",
       options,
     );
 

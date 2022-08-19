@@ -20,28 +20,15 @@ const Card = ({ directory }: CardProps) => {
 
   return (
     <div
-      className="w-full max-w-sm cursor-pointer rounded-xl border-2 p-4 duration-150 ease-in-out hover:scale-105"
+      className="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-4"
       onClick={onCardClick}
     >
-      <div className="flex items-center gap-3">
-        <Image
-          src="/placeholder.png"
-          alt="icon"
-          width={50}
-          height={50}
-          layout="fixed"
-          className="rounded-full"
-        />
-        <h2 className="text-xl font-semibold text-mine-shaft-400">
-          {directory.name}
-        </h2>
-        {directory.verified ? (
-          <div className="ml-auto flex items-center gap-2">
-            <Image src={check} alt="sample icon" height={18} width={18} />
-            <p className="text-xs tracking-wide text-purple-heart">Verified</p>
-          </div>
-        ) : null}
+      <div className="flex flex-row justify-center md:justify-end">
+        <img src={directory.image || "/placeholder.png"} className="w-20 h-20 object-cover rounded-full border-4 border-indigo-800" alt="icon" />
       </div>
+      <h2 className="text-xl font-semibold text-mine-shaft-400">
+        {directory.name}
+      </h2>
       <p className="my-3 text-sm leading-4 tracking-wide opacity-80">
         {directory.description}
       </p>
@@ -55,6 +42,14 @@ const Card = ({ directory }: CardProps) => {
           </li>
         ))}
       </ul>
+      <div className="flex justify-end mb-4">
+        {directory.verified ? (
+          <div className="ml-auto flex items-center gap-2">
+            <Image src={check} alt="sample icon" height={18} width={18} />
+            <p className="text-xs tracking-wide text-purple-heart">Verified</p>
+          </div>
+        ) : null}
+      </div>
     </div>
   );
 };

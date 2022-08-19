@@ -1285,6 +1285,11 @@
   dependencies:
     tslib "^2.4.0"
 
+"@tailwindcss/line-clamp@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/line-clamp/-/line-clamp-0.4.0.tgz#03353e31e77636b785f2336e8c978502cec1de81"
+  integrity sha512-HQZo6gfx1D0+DU3nWlNLD5iA6Ef4JAXh0LeD8lOGrJwEDBwwJNKQza6WoXhhY1uQrxOuU8ROxV7CqiQV4CoiLw==
+
 "@tanstack/query-core@^4.0.0-beta.1":
   version "4.0.10"
   resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-4.0.10.tgz#cae6f818006616dc72c95c863592f5f68b47548a"
@@ -3431,6 +3436,11 @@ react-dom@18.2.0:
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
+
+react-icons@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.4.0.tgz#a13a8a20c254854e1ec9aecef28a95cdf24ef703"
+  integrity sha512-fSbvHeVYo/B5/L4VhB7sBA1i2tS8MkT0Hb9t2H1AVPkwGfVHLJCqyr2Py9dKMxsyM63Eng1GkdZfbWj+Fmv8Rg==
 
 react-is@^16.13.1:
   version "16.13.1"

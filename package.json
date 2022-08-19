@@ -18,10 +18,12 @@
     "next": "12.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.4.0",
     "tailwind-merge": "^1.4.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.2.1",
+    "@tailwindcss/line-clamp": "^0.4.0",
     "@types/node": "18.0.3",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",

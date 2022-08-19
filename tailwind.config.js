@@ -2,7 +2,29 @@
 module.exports = {
   content: ["./src/**/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    fontFamily: {
+      sans: ["Kumbh Sans", "sans-serif"],
+    },
     extend: {
+      backgroundImage: {
+        "header-pattern": "url('/purple-mesh.jpeg')",
+      },
+      screens: {
+        sm: "640px",
+        // => @media (min-width: 640px) { ... }
+
+        md: "768px",
+        // => @media (min-width: 768px) { ... }
+
+        lg: "1024px",
+        // => @media (min-width: 1024px) { ... }
+
+        xl: "1280px",
+        // => @media (min-width: 1280px) { ... }
+        "2xl": "1336px",
+        "3xl": "1440px",
+        "4xl": "1536px",
+      },
       colors: {
         "purple-heart": {
           DEFAULT: "#7B3FE4",
@@ -43,8 +65,10 @@ module.exports = {
           800: "#000000",
           900: "#000000",
         },
+        "neutral-dark": "#19202D",
+        "neutral-light": "#6E8098",
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 };

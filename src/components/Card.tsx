@@ -14,7 +14,7 @@ const Card = ({ directory }: CardProps) => {
 
   return (
     <div
-      className="relative h-[230px] w-full max-w-sm cursor-pointer rounded-xl bg-white bg-center p-8 pt-12 shadow duration-150 ease-in-out hover:scale-105 lg:min-w-[350px]"
+      className="relative h-full w-full max-w-sm cursor-pointer rounded-xl bg-white bg-center p-8 pt-12 shadow duration-150 ease-in-out hover:scale-105 lg:min-w-[350px]"
       onClick={onCardClick}
     >
       <div className="flex w-full items-center">
@@ -37,7 +37,7 @@ const Card = ({ directory }: CardProps) => {
       <p className="my-3 text-base font-normal leading-[20px] tracking-wide text-neutral-light line-clamp-3">
         {directory.description}
       </p>
-      <ul className="absolute bottom-8 left-8 flex gap-2 text-xs">
+      <ul className="flex flex-row flex-wrap gap-2 text-xs">
         {directory.tags.map((tag, idx) => (
           <li
             key={idx}

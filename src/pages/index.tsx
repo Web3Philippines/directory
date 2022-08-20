@@ -21,7 +21,7 @@ const Home: NextPage = () => {
   return (
     <div className="m-0 bg-[#F2F2F2] p-0">
       <Seo templateTitle="Home" />
-      <header className="min-w-screen w-full bg-header-pattern bg-cover bg-bottom md:h-[160px] md:rounded-bl-[100px]">
+      <header className="min-w-screen w-full bg-gradient-to-r from-purple-900 to-violet-500 md:h-[160px] md:rounded-bl-[100px]">
         <div className="mx-auto flex h-[200px] max-w-screen-2xl flex-col items-center justify-between px-6 md:h-[160px] md:flex-row md:items-center md:rounded-bl-[100px] md:px-10 lg:px-[165px] xl:px-[100px]">
           <h3 className="mt-6 text-3xl font-bold lowercase text-white md:mt-0">
             Web3 Philippines Directory

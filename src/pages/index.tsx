@@ -55,6 +55,14 @@ const Home: NextPage = () => {
           {isLoading ? skeletonItems : null}
         </div>
       </main>
+
+      <footer>
+        <div className="flex justify-center">
+          <p className="mb-[20px] text-center text-base leading-6 text-neutral-light md:mb-[70px] md:text-left">
+            🖥️💖☕ by Web3 Philippines &amp; Wareneutron Developers
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };

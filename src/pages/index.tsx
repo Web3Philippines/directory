@@ -24,7 +24,7 @@ const Home: NextPage = () => {
       <header className="min-w-screen w-full bg-gradient-to-r from-purple-900 to-violet-500 md:h-[160px] md:rounded-bl-[100px]">
         <div className="mx-auto flex h-[200px] max-w-screen-2xl flex-col items-center justify-between px-6 md:h-[160px] md:flex-row md:items-center md:rounded-bl-[100px] md:px-10 lg:px-[165px] xl:px-[100px]">
           <h3 className="mt-6 text-3xl font-bold capitalize text-white md:mt-0">
-            Web3 Philippines Directory 📃
+            Web3 Philippines Directory
           </h3>
           <a
             href="https://forms.gle/8BUfE2A7NRtqYbm66"
@@ -43,7 +43,7 @@ const Home: NextPage = () => {
           local directory of awesome Web3 things curated by the community.
           <br />
           Actively maintained by the first and official Web3 community in the
-          Philippines. 📚💜💻{" "}
+          Philippines.{" "}
         </p>
 
         <div className="grid gap-y-[50px] md:grid-cols-2 md:gap-x-[10px] md:gap-y-[65px] lg:gap-x-[30px] xl:grid-cols-3 ">
@@ -59,7 +59,7 @@ const Home: NextPage = () => {
       <footer>
         <div className="flex justify-center">
           <p className="mb-[20px] text-center text-base leading-6 text-neutral-light md:mb-[70px] md:text-left">
-            🖥️💖☕ by Web3 Philippines &amp; Wareneutron Developers
+            Web3 Philippines &amp; Wareneutron Developers
           </p>
         </div>
       </footer>

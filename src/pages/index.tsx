@@ -59,7 +59,8 @@ const Home: NextPage = () => {
       <footer>
         <div className="flex justify-center">
           <p className="mb-[20px] text-center text-base leading-6 text-neutral-light md:mb-[70px] md:text-left">
-            Web3 Philippines &amp; Wareneutron Developers
+            <strong>Directory v1.2.0</strong> by Web3 Philippines &amp;
+            Wareneutron Developers
           </p>
         </div>
       </footer>

@@ -49,7 +49,7 @@ const Home: NextPage = () => {
         </p>
 
         {!!directories && (
-          <p className="mb-[20px] text-center text-base leading-6 text-neutral-light md:mb-[50px] md:text-left">
+          <p className="mb-[20px] text-center text-base leading-6 text-neutral-lightest md:mb-[50px] md:text-left">
             {`Last Updated: ${new Date(
               directories.lastUpdated * 1000,
             ).toLocaleString()}`}

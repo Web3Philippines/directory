@@ -64,6 +64,7 @@ module.exports = {
         },
         "neutral-dark": "#19202D",
         "neutral-light": "#6E8098",
+        "neutral-lightest": "#B0BDCF",
       },
     },
   },

@@ -67,8 +67,8 @@ const Home: NextPage = () => {
               rel="noopener noreferrer"
             >
               Web3 Philippines
-            </a>{" "}
-            &amp; &nbsp;
+            </a>
+            {" "}&amp;{" "}
             <a
               className="hover:underline"
               href="https://wareneutron.com"
@@ -79,7 +79,7 @@ const Home: NextPage = () => {
             </a>
           </p>
           <p className="mb-[20px] text-center text-base leading-6 text-neutral-light md:mb-[70px] md:text-left">
-            Directory &nbsp;
+            Directory {""}
             <a
               className="hover:underline"
               href="https://github.com/web3phl/directory/releases/latest"

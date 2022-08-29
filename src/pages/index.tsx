@@ -13,6 +13,8 @@ const Home: NextPage = () => {
     size,
   });
 
+  console.log(useGetDirectories({ page, size }));
+
   const skeletonItems: JSX.Element[] = [];
   for (let i = 1; i <= 9; i++) {
     skeletonItems.push(<SkeletonCard />);
@@ -46,9 +48,17 @@ const Home: NextPage = () => {
           Philippines.{" "}
         </p>
 
+        {!!directories && (
+          <p className="mb-[20px] text-center text-base leading-6 text-neutral-lightest md:mb-[50px] md:text-left">
+            {`Last Updated: ${new Date(
+              directories.lastUpdated * 1000,
+            ).toLocaleString()}`}
+          </p>
+        )}
+
         <div className="grid gap-y-[50px] md:grid-cols-2 md:gap-x-[10px] md:gap-y-[65px] lg:gap-x-[30px] xl:grid-cols-3 ">
-          {!!directories && directories.length > 0
-            ? directories.map((directory: Directory) => (
+          {!!directories && directories.data.length > 0
+            ? directories.data.map((directory: Directory) => (
                 <Card directory={directory} key={directory.id} />
               ))
             : null}

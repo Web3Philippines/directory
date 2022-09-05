@@ -18,7 +18,7 @@ async function getDirectories() {
     );
 
     const directories = await response.json();
-    return directories.data;
+    return directories;
   } catch (error: unknown) {
     console.error("getDirectories error", error);
   }

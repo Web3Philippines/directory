@@ -6,16 +6,12 @@ const iconDiv =
 
 function DarkModeSwitch() {
   //Set light theme by default
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
     //Set theme on device
     if (typeof window !== "undefined") {
-      if (
-        localStorage.theme === "dark" ||
-        (!("theme" in localStorage) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ) {
+      if (localStorage.theme === "dark" || !("theme" in localStorage)) {
         setTheme("dark");
         document.documentElement.classList.add("dark");
       } else {
@@ -35,8 +31,6 @@ function DarkModeSwitch() {
     setTheme(_theme);
     localStorage.setItem("theme", _theme);
   }
-
-  console.log(theme);
 
   return (
     <div className="relative ml-auto mr-5 h-12 w-12">

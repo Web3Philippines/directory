@@ -14,7 +14,7 @@ const Card = ({ directory }: CardProps) => {
 
   return (
     <div
-      className="relative h-full w-full max-w-sm cursor-pointer rounded-xl bg-white bg-center p-8 pt-12 shadow duration-150 ease-in-out hover:scale-105 lg:min-w-[350px]"
+      className="relative h-full w-full max-w-sm cursor-pointer rounded-xl bg-white bg-center p-8 pt-12 shadow duration-150 ease-in-out hover:scale-105 dark:bg-gray-900 lg:min-w-[350px]"
       onClick={onCardClick}
     >
       <div className="flex w-full items-center">
@@ -27,7 +27,7 @@ const Card = ({ directory }: CardProps) => {
             className="absolute -top-4 left-8 self-end rounded-2xl"
           />
         </div>
-        <h2 className="flex w-full items-center gap-2 text-left text-xl font-semibold leading-6 text-neutral-dark">
+        <h2 className="flex w-full items-center gap-2 text-left text-xl font-semibold leading-6 text-neutral-dark dark:text-dark-neutral-light">
           {directory.name}{" "}
           {directory.verified ? (
             <Image src={check} alt="sample icon" height={14} width={14} />
@@ -55,12 +55,12 @@ export function SkeletonCard() {
   return (
     <div
       role="status"
-      className="relative h-[230px] w-full max-w-sm animate-pulse cursor-pointer rounded-xl bg-white bg-center p-8 pt-12 shadow duration-150 ease-in-out hover:scale-105 lg:min-w-[350px]"
+      className="relative h-[230px] w-full max-w-sm animate-pulse cursor-pointer rounded-xl bg-white bg-center p-8 pt-12 shadow duration-150 ease-in-out hover:scale-105 dark:bg-gray-900 lg:min-w-[350px]"
     >
       <div className="flex w-full items-center">
         <div>
           <svg
-            className="absolute -top-4 left-8 h-[50px] w-[50px] self-end rounded-2xl text-gray-400"
+            className="absolute -top-4 left-8 h-[50px] w-[50px] self-end rounded-2xl text-gray-400 dark:text-neutral-light"
             aria-hidden="true"
             fill="currentColor"
             viewBox="0 0 20 20"
@@ -74,18 +74,18 @@ export function SkeletonCard() {
           </svg>
         </div>
         <h2 className="mb-4 flex w-full items-center gap-2 text-left text-xl font-semibold leading-6 text-neutral-dark">
-          <div className="mb-2 h-2.5 w-32 rounded-full bg-gray-200" />
+          <div className="mb-2 h-2.5 w-32 rounded-full bg-gray-200 dark:bg-gray-400" />
         </h2>
       </div>
 
-      <div className="mb-2.5 h-2 rounded-full bg-gray-200" />
-      <div className="mb-2.5 h-2 rounded-full bg-gray-200" />
-      <div className="h-2 rounded-full bg-gray-200" />
+      <div className="mb-2.5 h-2 rounded-full bg-gray-200 dark:bg-gray-400" />
+      <div className="mb-2.5 h-2 rounded-full bg-gray-200 dark:bg-gray-400" />
+      <div className="h-2 rounded-full bg-gray-200 dark:bg-gray-400" />
       <ul className="absolute bottom-8 left-8 flex gap-2 text-xs">
-        <div className="h-2 w-10 rounded-full bg-gray-200" />
-        <div className="h-2 w-10 rounded-full bg-gray-200" />
-        <div className="h-2 w-10 rounded-full bg-gray-200" />{" "}
-        <div className="h-2 w-10 rounded-full bg-gray-200" />
+        <div className="h-2 w-10 rounded-full bg-gray-200 dark:bg-gray-400" />
+        <div className="h-2 w-10 rounded-full bg-gray-200 dark:bg-gray-400" />
+        <div className="h-2 w-10 rounded-full bg-gray-200 dark:bg-gray-400" />{" "}
+        <div className="h-2 w-10 rounded-full bg-gray-200 dark:bg-gray-400" />
       </ul>
     </div>
   );

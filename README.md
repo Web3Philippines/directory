@@ -1,16 +1,13 @@
-# Web3 Philippines Directory [![huntr](https://cdn.huntr.dev/huntr_security_badge_mono.svg)](https://huntr.dev)
+# Web3 Philippines Directory [![created by](https://img.shields.io/badge/created%20by-Web3%20Philippines%20Community-7b3fe4.svg?longCache=true&style=flat-square)](https://web3philippines.org)
 
-[![created by](https://img.shields.io/badge/created%20by-Web3%20Philippines-purple.svg?longCache=true&style=flat-square)](https://web3philippines.org) [![maintained by](https://img.shields.io/badge/maintained%20by-OSS%20Philippines-blue.svg?longCache=true&style=flat-square)](https://ossph.org) [![maintained by](https://img.shields.io/badge/maintained%20by-Wareneutron%20Devs-blue.svg?longCache=true&style=flat-square)](https://wareneutron.com) [![Release](https://img.shields.io/github/release/web3phl/directory.svg?style=flat-square)](https://github.com/web3phl/directory/releases) [![Star](https://img.shields.io/github/stars/web3phl/directory.svg?style=flat-square)](https://github.com/web3phl/directory/stargazers) [![License](https://img.shields.io/github/license/web3phl/directory.svg?style=flat-square)](https://github.com/web3phl/directory/blob/main/LICENSE)
+[![maintained by](https://img.shields.io/badge/maintained%20by-OSS%20Philippines-blue.svg?longCache=true&style=flat-square)](https://ossph.org) [![maintained by](https://img.shields.io/badge/maintained%20by-Wareneutron%20Devs-blue.svg?longCache=true&style=flat-square)](https://wareneutron.com) [![Release](https://img.shields.io/github/release/web3phl/directory.svg?style=flat-square)](https://github.com/web3phl/directory/releases) [![Star](https://img.shields.io/github/stars/web3phl/directory.svg?style=flat-square)](https://github.com/web3phl/directory/stargazers) [![License](https://img.shields.io/github/license/web3phl/directory.svg?style=flat-square)](https://github.com/web3phl/directory/blob/main/LICENSE)
 
 ![Directory Banner](./.github/image/banner.jpg)
 **Banner by Mark Cabale**
 
 ---
 
-![Directory Banner](./.github/images/banner.jpg)
-<font size="2">Banner by Mark Cabale</font>
-
-**Web3 Philippines Directory** is an open-source web application digital local directory of awesome Web3 things curated by the community. Actively maintained by the Web3 community in the Philippines. 📚💜💻
+**Directory** is an open-source web application digital local directory of awesome Web3 things curated by the community. Actively maintained by the Web3 community in the Philippines. 📚💜💻
 
 ## 🎯 Contributing
 
@@ -36,7 +33,7 @@ Web3 Philippines Directory is licensed under [GNU General Public License v3.0](h
 
 ## 📝 Author
 
-Web3 Philippines Directory is developed and maintained by [Web3 Philippines](https://web3philippines.org), [OSS Philippines](https://ossph.org) and [Wareneutron Developers](https://wareneutron.com) with the help of awesome [contributors](https://github.com/web3phl/directory/graphs/contributors).
+Web3 Philippines Directory is developed and maintained by [Web3 Philippines](https://web3philippines.org), [OSS Philippines](https://ossph.org) and [Wareneutron Devs](https://wareneutron.com) with the help of awesome [contributors](https://github.com/web3phl/directory/graphs/contributors).
 
 [![contributors](https://contrib.rocks/image?repo=web3phl/directory)](https://github.com/web3phl/directory/graphs/contributors)
 

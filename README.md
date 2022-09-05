@@ -28,10 +28,10 @@ Web3 Philippines Directory is licensed under [GNU General Public License v3.0](h
 
 ## 📝 Author
 
-Web3 Philippines Directory is developed and maintained by [Web3 Philippines](https://web3philippines.org) & [Wareneutron Developers](https://wareneutron.com) with the help of awesome [contributors](https://github.com/web3phl/directory/graphs/contributors).
+Web3 Philippines Directory is developed and maintained by [Web3 Philippines](https://web3philippines.org), [OSS Philippines](https://ossph.org) and [Wareneutron Developers](https://wareneutron.com) with the help of awesome [contributors](https://github.com/web3phl/directory/graphs/contributors).
 
 [![contributors](https://contrib.rocks/image?repo=web3phl/directory)](https://github.com/web3phl/directory/graphs/contributors)
 
 ---
 
-💻💖☕ by [Web3 Philippines](https://web3philippines.org) & [Wareneutron Developers](https://wareneutron.com) | He is Awesome 🙏
+💻💖☕ by [Web3 Philippines](https://web3philippines.org), [OSS Philippines](https://ossph.org), and [Wareneutron Devs](https://wareneutron.com) | He is Awesome 🙏

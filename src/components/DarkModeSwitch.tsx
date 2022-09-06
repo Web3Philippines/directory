@@ -6,18 +6,18 @@ const iconDiv =
 
 function DarkModeSwitch() {
   //Set light theme by default
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("theme");
 
   useEffect(() => {
     //Set theme on device
     if (typeof window !== "undefined") {
-      if (localStorage.theme === "dark" || !("theme" in localStorage)) {
-        setTheme("dark");
-        document.documentElement.classList.add("dark");
-      } else {
-        setTheme("light");
-        document.documentElement.classList.remove("dark");
-      }
+      const _theme =
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+          ? "dark"
+          : "light";
+      changeTheme(_theme);
     }
   }, [theme]);
 
@@ -36,7 +36,7 @@ function DarkModeSwitch() {
     <div className="relative ml-auto mr-5 h-12 w-12">
       <div
         className={`text-black ${iconDiv} ${
-          theme === "dark" ? "opacity-100" : "hidden opacity-0"
+          theme === "dark" ? "z-10 opacity-100" : "z-0 opacity-0"
         }`}
         onClick={() => changeTheme("light")}
       >
@@ -44,7 +44,7 @@ function DarkModeSwitch() {
       </div>
       <div
         className={`text-white ${iconDiv} ${
-          theme === "light" ? "opacity-100" : "hidden opacity-0"
+          theme === "light" ? "z-10 opacity-100" : "z-0 opacity-0"
         }`}
         onClick={() => changeTheme("dark")}
       >

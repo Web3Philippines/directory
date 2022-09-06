@@ -14,7 +14,7 @@ const Card = ({ directory }: CardProps) => {
 
   return (
     <div
-      className="relative h-full w-full max-w-sm cursor-pointer rounded-xl bg-white bg-center p-8 pt-12 shadow duration-150 ease-in-out hover:scale-105 dark:bg-gray-900 lg:min-w-[350px]"
+      className="relative mx-auto h-full w-full max-w-sm cursor-pointer rounded-xl bg-white bg-center p-8 pt-12 shadow duration-150 ease-in-out hover:scale-105 dark:bg-gray-900 lg:min-w-[350px]"
       onClick={onCardClick}
     >
       <div className="flex w-full items-center">

@@ -65,8 +65,12 @@ module.exports = {
         "neutral-dark": "#19202D",
         "neutral-light": "#6E8098",
         "neutral-lightest": "#B0BDCF",
+        "dark-neutral-light": "#e6dfd2",
+        "light-bg": "#F2F2F2",
+        "dark-bg": "#0D0D0D",
       },
     },
   },
   plugins: [require("@tailwindcss/line-clamp")],
+  darkMode: "class",
 };

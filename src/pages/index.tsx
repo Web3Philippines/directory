@@ -65,7 +65,12 @@ const Home: NextPage = () => {
             : null}
           {isLoading ? skeletonItems : null}
         </div>
-        <Pagination />
+        <Pagination
+          setPage={setPage}
+          page={page}
+          length={directories?.length}
+          size={size}
+        />
       </main>
 
       <footer>
@@ -79,8 +84,8 @@ const Home: NextPage = () => {
               rel="noopener noreferrer"
             >
               Web3 Philippines
-            </a>
-            {" "}&amp;{" "}
+            </a>{" "}
+            &amp;{" "}
             <a
               className="hover:underline"
               href="https://wareneutron.com"

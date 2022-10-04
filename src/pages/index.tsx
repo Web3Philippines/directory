@@ -69,6 +69,7 @@ const Home: NextPage = () => {
           setPage={setPage}
           page={page}
           length={directories?.length}
+          hasNextPage={directories?.hasNextPage}
           size={size}
         />
       </main>

@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { DirectoryQuery } from "@/interface";
 
 //TODO: make this async await for actual data fetching
-async function getDirectories() {
+async function getDirectories({ page, size, name, tags }: DirectoryQuery) {
   try {
     // temporary patch
     const options = {
@@ -13,7 +13,9 @@ async function getDirectories() {
     };
 
     const response = await fetch(
-      "https://directory-api.web3philippines.org/api/directory",
+      `https://directory-api.web3philippines.org/api/directory?page=${
+        page - 1
+      }&size=${size}`,
       options,
     );
 
@@ -25,7 +27,9 @@ async function getDirectories() {
 }
 
 export function useGetDirectories({ page, size, name, tags }: DirectoryQuery) {
-  return useQuery(["directories", page, size, name, tags], getDirectories);
+  return useQuery(["directories", page, size, name, tags], () =>
+    getDirectories({ page, size, name, tags }),
+  );
 }
 
 export interface DirectoryInfo {

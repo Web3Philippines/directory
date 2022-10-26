@@ -3,16 +3,14 @@ module.exports = {
   eslint: {
     dirs: ["src"],
   },
-
   reactStrictMode: true,
-
-  // Uncoment to add domain whitelist
-  // images: {
-  //   domains: [
-  //     'res.cloudinary.com',
-  //   ],
-  // },
-
+  swcMinify: true,
+  rewrites: async () => [
+    {
+      source: "/api/:path(.*)",
+      destination: "https://directory-api.web3philippines.org/api/:path",
+    },
+  ],
   // SVGR
   webpack(config) {
     config.module.rules.push({

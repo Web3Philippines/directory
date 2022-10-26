@@ -4,6 +4,7 @@
 
 body {
   scroll-behavior: smooth;
+  @apply bg-[#F2F2F2];
 }
 
 @media only screen and (max-width: 800px) {

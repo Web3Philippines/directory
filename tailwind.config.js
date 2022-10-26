@@ -18,9 +18,9 @@ module.exports = {
 
         xl: "1280px",
         // => @media (min-width: 1280px) { ... }
-        "2xl": "1336px",
-        "3xl": "1440px",
+        "2xl": "1440px",
         "4xl": "1536px",
+        "5xl": "1920px",
       },
       colors: {
         "purple-heart": {

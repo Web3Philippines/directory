@@ -1,46 +1,48 @@
 import type { NextPage } from "next";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
-import Card, { SkeletonCard } from "@/components/Card";
+import Modal from "react-modal";
+import Card from "@/components/Card";
 import Pagination from "@/components/Pagination";
-import Seo from "@/components/Seo";
+import SkeletonCard from "@/components/SkeletonCard";
 import { Directory } from "@/interface";
+import Layout from "@/layout";
+import { useIsMobileScreen, useIsTabletScreen } from "@/lib/hooks/useScreens";
+import DirectoryDetails from "@/modules/directory-details";
 import { useGetDirectories } from "@/queries";
 
+Modal.setAppElement("#__next");
+
 const Home: NextPage = () => {
+  const isMobile = useIsMobileScreen();
+  const isTablet = useIsTabletScreen();
+  const router = useRouter();
   const [page, setPage] = useState<number>(1);
-  const [size, setSize] = useState<number>(12);
+  const [size] = useState<number>(12);
   const { data: directories, isLoading } = useGetDirectories({
     page,
     size,
   });
-
-  console.log(useGetDirectories({ page, size }));
+  const [isModalExist, setIsModalExist] = useState<boolean>(false);
 
   const skeletonItems: JSX.Element[] = [];
   for (let i = 1; i <= 9; i++) {
-    skeletonItems.push(<SkeletonCard />);
+    skeletonItems.push(<SkeletonCard key={i} />);
   }
 
-  return (
-    <div className="m-0 bg-[#F2F2F2] p-0">
-      <Seo templateTitle="Home" />
-      <header className="min-w-screen w-full bg-gradient-to-r from-purple-900 to-violet-500 md:h-[160px] md:rounded-bl-[100px]">
-        <div className="mx-auto flex h-[200px] max-w-screen-2xl flex-col items-center justify-between px-6 md:h-[160px] md:flex-row md:items-center md:rounded-bl-[100px] md:px-10 lg:px-[165px] xl:px-[100px]">
-          <h3 className="mt-6 text-3xl font-bold capitalize text-white md:mt-0">
-            Web3 Philippines Directory
-          </h3>
-          <a
-            href="https://forms.gle/8BUfE2A7NRtqYbm66"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-purple-hearts mb-6 self-end rounded-2xl border-2 px-5 py-3 font-bold text-white hover:opacity-75 md:mb-0 md:self-center"
-          >
-            Submit project
-          </a>
-        </div>
-      </header>
+  const handleOnAfterOpen = () => {
+    setIsModalExist((old) => !old);
+  };
 
-      <main className="mx-auto flex min-h-screen max-w-screen-2xl flex-1 flex-col justify-center px-6 pb-[70px] pt-10 md:px-10 lg:px-[165px] xl:px-[100px]">
+  const handleOnRequestClose = () => {
+    setIsModalExist((old) => !old);
+    router.push("/");
+  };
+
+  return (
+    <Layout title="Home">
+      <div className=" flex w-full flex-1 flex-col justify-center px-6 pb-[70px] pt-10 md:px-10 lg:px-[165px] xl:px-[100px]">
         <p className="mb-[50px] text-center text-base leading-6 text-neutral-light md:mb-[70px] md:text-left">
           Web3 Philippines Directory is an open-source web application digital
           local directory of awesome Web3 things curated by the community.
@@ -60,7 +62,16 @@ const Home: NextPage = () => {
         <div className="grid gap-y-[50px] md:grid-cols-2 md:gap-x-[10px] md:gap-y-[65px] lg:gap-x-[30px] xl:grid-cols-3 ">
           {!!directories && directories.data.length > 0
             ? directories.data.map((directory: Directory) => (
-                <Card directory={directory} key={directory.id} />
+                <Link
+                  key={directory.id}
+                  href={`/?directoryId=${directory.id}`}
+                  as={`/directory/${directory.id}`}
+                >
+                  <a>
+                    {" "}
+                    <Card directory={directory} />
+                  </a>
+                </Link>
               ))
             : null}
           {isLoading ? skeletonItems : null}
@@ -72,44 +83,42 @@ const Home: NextPage = () => {
           hasNextPage={directories?.hasNextPage}
           size={size}
         />
-      </main>
-
-      <footer>
-        <div className="flex flex-col items-center">
-          <p className="mb-[20px] text-center text-base leading-6 text-neutral-light md:mb-[10px] md:text-left">
-            🖥️💖☕ by&nbsp;
-            <a
-              className="hover:underline"
-              href="https://web3philippines.org"
-              target="_blank"
-              rel="noopener noreferrer"
+      </div>
+      <Modal
+        isOpen={!!router.query.directoryId}
+        onAfterOpen={handleOnAfterOpen}
+        onRequestClose={handleOnRequestClose}
+        style={{
+          content: {
+            width: isMobile ? "initial" : isTablet ? "75%" : "50%",
+            margin: "auto",
+          },
+        }}
+      >
+        <div className=" flex w-full justify-end">
+          <button onClick={handleOnRequestClose}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="h-6 w-6"
             >
-              Web3 Philippines
-            </a>{" "}
-            &amp;{" "}
-            <a
-              className="hover:underline"
-              href="https://wareneutron.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Wareneutron Developers
-            </a>
-          </p>
-          <p className="mb-[20px] text-center text-base leading-6 text-neutral-light md:mb-[70px] md:text-left">
-            Directory {""}
-            <a
-              className="hover:underline"
-              href="https://github.com/web3phl/directory/releases/latest"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              v1.2.0
-            </a>
-          </p>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
         </div>
-      </footer>
-    </div>
+        <DirectoryDetails
+          directoryId={router.query.directoryId as string}
+          isOnModal={isModalExist}
+        />
+      </Modal>
+    </Layout>
   );
 };
 

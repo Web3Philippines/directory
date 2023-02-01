@@ -2,13 +2,14 @@ import type { NextPage } from "next";
 import { useState } from "react";
 import Card, { SkeletonCard } from "@/components/Card";
 import DarkModeSwitch from "@/components/DarkModeSwitch";
+import Pagination from "@/components/Pagination";
 import Seo from "@/components/Seo";
 import { Directory } from "@/interface";
 import { useGetDirectories } from "@/queries";
 
 const Home: NextPage = () => {
   const [page, setPage] = useState<number>(1);
-  const [size, setSize] = useState<number>(10);
+  const [size, setSize] = useState<number>(12);
   const { data: directories, isLoading } = useGetDirectories({
     page,
     size,
@@ -68,6 +69,13 @@ const Home: NextPage = () => {
             : null}
           {isLoading ? skeletonItems : null}
         </div>
+        <Pagination
+          setPage={setPage}
+          page={page}
+          length={directories?.length}
+          hasNextPage={directories?.hasNextPage}
+          size={size}
+        />
       </main>
 
       <footer>

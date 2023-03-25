@@ -4,7 +4,7 @@ Any contributions are welcome, encouraged, and valued. See the following informa
 
 ## 📋 Code of Conduct
 
-This project and everyone participating in it is governed by the Web3 Philippines Directory [Code of Conduct](https://github.com/web3phl/directory/blob/main/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to <opensource@wareneutron.com>.
+This project and everyone participating in it is governed by the Web3 Philippines Directory [Code of Conduct](https://github.com/web3phl/directory/blob/main/code_of_conduct.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to <opensourcesoftwareph@gmail.com>.
 
 ## 💖 How to Contribute
 
@@ -24,7 +24,7 @@ Answering a question in [Discussions](https://github.com/web3phl/directory/discu
 
 ### 🐞 Reporting Bugs
 
-For any security bugs or issues, please read the [security policy](./SECURITY.md).
+For any security bugs or issues, please read the [security policy](./security.md).
 
 ---
 

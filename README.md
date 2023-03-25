@@ -3,7 +3,7 @@
 [![maintainer](https://img.shields.io/badge/maintainer-OSS%20Philippines-blue.svg?logo=github&labelColor=181717&longCache=true&style=flat-square)](https://ossph.org) [![release](https://img.shields.io/github/release/warengonzaga/css-text-portrait-builder.svg?logo=github&labelColor=181717&color=green&style=flat-square)](https://github.com/warengonzaga/css-text-portrait-builder/releases) [![star](https://img.shields.io/github/stars/warengonzaga/css-text-portrait-builder.svg?&logo=github&labelColor=181717&color=yellow&style=flat-square)](https://github.com/warengonzaga/css-text-portrait-builder/stargazers) [![license](https://img.shields.io/github/license/warengonzaga/css-text-portrait-builder.svg?&logo=github&labelColor=181717&style=flat-square)](https://github.com/warengonzaga/css-text-portrait-builder/blob/main/license)
 
 ![Directory Banner](./.github/image/banner.jpg)
-**Banner by Mark Cabale**
+**Banner by [Mark Cabale](https://www.linkedin.com/in/markcabale)**
 
 ---
 
@@ -13,7 +13,7 @@
 
 Contributions are welcome, create a pull request to this repo and we will review your code. Please consider to submit your pull request to the `dev` branch. Thank you!
 
-Read the project's [contributing guide](./CONTRIBUTING.md) for more info.
+Read the project's [contributing guide](./contributing.md) for more info.
 
 ## 💬 Discussions
 
@@ -25,7 +25,7 @@ Please report any issues and bugs by [creating a new issue here](https://github.
 
 ## 📋 Code of Conduct
 
-Read the project's [code of conduct](./CODE_OF_CONDUCT.md).
+Read the project's [code of conduct](./code_of_conduct.md).
 
 ## 📃 License
 

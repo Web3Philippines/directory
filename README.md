@@ -1,9 +1,9 @@
-# Web3 Philippines Directory [![created by](https://img.shields.io/badge/created%20by-Web3%20Philippines%20Community-7b3fe4.svg?longCache=true&style=flat-square)](https://web3philippines.org)
+# Directory [![by](https://img.shields.io/badge/by-Web3%20Philippines-7b3fe4.svg?longCache=true&style=flat-square)](https://web3philippines.org)
 
-[![maintained by](https://img.shields.io/badge/maintained%20by-OSS%20Philippines-blue.svg?longCache=true&style=flat-square)](https://ossph.org) [![maintained by](https://img.shields.io/badge/maintained%20by-Wareneutron%20Devs-blue.svg?longCache=true&style=flat-square)](https://wareneutron.com) [![Release](https://img.shields.io/github/release/web3phl/directory.svg?style=flat-square)](https://github.com/web3phl/directory/releases) [![Star](https://img.shields.io/github/stars/web3phl/directory.svg?style=flat-square)](https://github.com/web3phl/directory/stargazers) [![License](https://img.shields.io/github/license/web3phl/directory.svg?style=flat-square)](https://github.com/web3phl/directory/blob/main/LICENSE)
+[![maintainer](https://img.shields.io/badge/maintainer-OSS%20Philippines-blue.svg?logo=github&labelColor=181717&longCache=true&style=flat-square)](https://ossph.org) [![release](https://img.shields.io/github/release/web3phl/directory.svg?logo=github&labelColor=181717&color=green&style=flat-square)](https://github.com/web3phl/directory/releases) [![star](https://img.shields.io/github/stars/web3phl/directory.svg?&logo=github&labelColor=181717&color=yellow&style=flat-square)](https://github.com/web3phl/directory/stargazers) [![license](https://img.shields.io/github/license/web3phl/directory.svg?&logo=github&labelColor=181717&style=flat-square)](https://github.com/web3phl/directory/blob/main/license)
 
 ![Directory Banner](./.github/image/banner.jpg)
-**Banner by Mark Cabale**
+**Banner by [Mark Cabale](https://www.linkedin.com/in/markcabale)**
 
 ---
 
@@ -13,7 +13,7 @@
 
 Contributions are welcome, create a pull request to this repo and we will review your code. Please consider to submit your pull request to the `dev` branch. Thank you!
 
-Read the project's [contributing guide](./CONTRIBUTING.md) for more info.
+Read the project's [contributing guide](./contributing.md) for more info.
 
 ## 💬 Discussions
 
@@ -25,7 +25,7 @@ Please report any issues and bugs by [creating a new issue here](https://github.
 
 ## 📋 Code of Conduct
 
-Read the project's [code of conduct](./CODE_OF_CONDUCT.md).
+Read the project's [code of conduct](./code_of_conduct.md).
 
 ## 📃 License
 
@@ -39,4 +39,4 @@ Web3 Philippines Directory is developed and maintained by [Web3 Philippines](htt
 
 ---
 
-💻💖☕ by [Web3 Philippines](https://web3philippines.org), [OSS Philippines](https://ossph.org), and [Wareneutron Devs](https://wareneutron.com) | He is Awesome 🙏
+💻💖☕ by [Web3 Philippines](https://web3philippines.org), [OSS Philippines](https://ossph.org) | He is Awesome 🙏

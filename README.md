@@ -1,6 +1,6 @@
 # Directory [![by](https://img.shields.io/badge/by-Web3%20Philippines-7b3fe4.svg?longCache=true&style=flat-square)](https://web3philippines.org)
 
-> **Note:** This project is being migrated to a new platform. As a result, this repository will no longer be maintained. Stay tuned for updates on the new platform!
+> **Note**: This project is being migrated to a new platform. As a result, this repository will no longer be maintained. Stay tuned for updates on the new platform!
 
 [![maintainer](https://img.shields.io/badge/maintainer-OSS%20Philippines-blue.svg?logo=github&labelColor=181717&longCache=true&style=flat-square)](https://ossph.org) [![release](https://img.shields.io/github/release/web3phl/directory.svg?logo=github&labelColor=181717&color=green&style=flat-square)](https://github.com/web3phl/directory/releases) [![star](https://img.shields.io/github/stars/web3phl/directory.svg?&logo=github&labelColor=181717&color=yellow&style=flat-square)](https://github.com/web3phl/directory/stargazers) [![license](https://img.shields.io/github/license/web3phl/directory.svg?&logo=github&labelColor=181717&style=flat-square)](https://github.com/web3phl/directory/blob/main/license)
 

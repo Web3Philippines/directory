@@ -6,9 +6,6 @@ module.exports = {
       sans: ["Kumbh Sans", "sans-serif"],
     },
     extend: {
-      backgroundImage: {
-        "header-pattern": "url('/purple-mesh.jpeg')",
-      },
       screens: {
         sm: "640px",
         // => @media (min-width: 640px) { ... }
@@ -67,6 +64,7 @@ module.exports = {
         },
         "neutral-dark": "#19202D",
         "neutral-light": "#6E8098",
+        "neutral-lightest": "#B0BDCF",
       },
     },
   },

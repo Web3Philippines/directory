@@ -1,17 +1,20 @@
 import type { NextPage } from "next";
 import { useState } from "react";
 import Card, { SkeletonCard } from "@/components/Card";
+import Pagination from "@/components/Pagination";
 import Seo from "@/components/Seo";
 import { Directory } from "@/interface";
 import { useGetDirectories } from "@/queries";
 
 const Home: NextPage = () => {
   const [page, setPage] = useState<number>(1);
-  const [size, setSize] = useState<number>(10);
+  const [size, setSize] = useState<number>(12);
   const { data: directories, isLoading } = useGetDirectories({
     page,
     size,
   });
+
+  console.log(useGetDirectories({ page, size }));
 
   const skeletonItems: JSX.Element[] = [];
   for (let i = 1; i <= 9; i++) {
@@ -21,10 +24,10 @@ const Home: NextPage = () => {
   return (
     <div className="m-0 bg-[#F2F2F2] p-0">
       <Seo templateTitle="Home" />
-      <header className="min-w-screen w-full bg-header-pattern bg-cover bg-bottom md:h-[160px] md:rounded-bl-[100px]">
+      <header className="min-w-screen w-full bg-gradient-to-r from-purple-900 to-violet-500 md:h-[160px] md:rounded-bl-[100px]">
         <div className="mx-auto flex h-[200px] max-w-screen-2xl flex-col items-center justify-between px-6 md:h-[160px] md:flex-row md:items-center md:rounded-bl-[100px] md:px-10 lg:px-[165px] xl:px-[100px]">
           <h3 className="mt-6 text-3xl font-bold capitalize text-white md:mt-0">
-            Web3 Philippines Directory 📃
+            Web3 Philippines® Directory
           </h3>
           <a
             href="https://forms.gle/8BUfE2A7NRtqYbm66"
@@ -43,18 +46,69 @@ const Home: NextPage = () => {
           local directory of awesome Web3 things curated by the community.
           <br />
           Actively maintained by the first and official Web3 community in the
-          Philippines. 📚💜💻{" "}
+          Philippines.{" "}
         </p>
 
+        {!!directories && (
+          <p className="mb-[20px] text-center text-base leading-6 text-neutral-lightest md:mb-[50px] md:text-left">
+            {`Last Updated: ${new Date(
+              directories.lastUpdated * 1000,
+            ).toLocaleString()}`}
+          </p>
+        )}
+
         <div className="grid gap-y-[50px] md:grid-cols-2 md:gap-x-[10px] md:gap-y-[65px] lg:gap-x-[30px] xl:grid-cols-3 ">
-          {!!directories && directories.length > 0
-            ? directories.map((directory: Directory) => (
+          {!!directories && directories.data.length > 0
+            ? directories.data.map((directory: Directory) => (
                 <Card directory={directory} key={directory.id} />
               ))
             : null}
           {isLoading ? skeletonItems : null}
         </div>
+        <Pagination
+          setPage={setPage}
+          page={page}
+          length={directories?.length}
+          hasNextPage={directories?.hasNextPage}
+          size={size}
+        />
       </main>
+
+      <footer>
+        <div className="flex flex-col items-center">
+          <p className="mb-[20px] text-center text-base leading-6 text-neutral-light md:mb-[10px] md:text-left">
+            🖥️💖☕ by&nbsp;
+            <a
+              className="hover:underline"
+              href="https://web3philippines.org"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Web3 PH
+            </a>{" "}
+            &amp;{" "}
+            <a
+              className="hover:underline"
+              href="https://ossph.org"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              OSS PH
+            </a>
+          </p>
+          <p className="mb-[20px] text-center text-base leading-6 text-neutral-light md:mb-[70px] md:text-left">
+            Directory {""}
+            <a
+              className="hover:underline"
+              href="https://github.com/web3phl/directory/releases/latest"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              v1.2.0
+            </a>
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
